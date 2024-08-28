@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Village </title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/e4acb1e0d9.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <!-- <img src="images/lg.png.jpeg" class="logo" alt="" height="100"> -->
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#About">About </a></li>
+                    <li><a href="#Gallery">Gallery</a></li>
+                    <i class="fa-regular fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <h2>Mera Gaon 🙋‍♂️</h2>
+                <h1>Welcome to <span>Nagla Veera</span></h1>
+            </div>
+        </div>
+    </div>
+
+    <!----------------------------------------------------------------- Coding Portion for about page ------------------------------------------------------------------>
+
+    <div id="About">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/ankush.jpeg" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About My Village</h1>
+                    <p> गाँव नगला वीरा, पोस्ट गहलाऊ, जिला अलीगढ़, उत्तर प्रदेश का एक सुंदर गाँव है। यहाँ के लोग रंग-बिरंगे त्योहारों को धूमधाम से मनाते हैं
+                        गाँव एक बड़े परिवार की तरह है, जहाँ हर कोई एक-दूसरे को जानता है और जब जरूरत हो, तो मदद करता है।
+                        गाँव में शांति और स्थिरता का माहौल है, जो स्थानीय और बाहरी आगंतुकों को प्रेरित करता है।
+                        नगला वीरा में चलते समय, आपको गाँव के इतिहास से बहुत कुछ सीखने को मिलेगा। यहाँ के लोगों की मित्रता और गाँव
+                        के माहौल का मजा लें, यहाँ पर हर कोने में एक कहानी होती है और हर मुस्कान साथी समुदाय की भावना को दर्शाती है।
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+
+    <!-- --------------------------------------------------portfolio --------------------------------------------------------------------------------- -->
+
+    <div id="Gallery">
+        <div class="container">
+            <h1 class="sub-title">Gallery</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/Hindu-Shiva-God-Wallpaper-Free-Download.jpg" alt="">
+                    
+                </div>
+                <div class="work">
+                    <img src="images/image2.jpg" alt="">
+                    
+                </div>
+                <div class="work">
+                    <img src="images/image3.jpg" alt="">
+                    
+                </div>
+                <div class="work">
+                    <img src="images/images1.jpg" alt="">
+                    
+                </div>
+                <div class="work">
+                    <img src="images/image5.jpg" alt="">
+                    
+                </div>
+                <div class="work">
+                    <img src="images/images6.jpg" alt="">
+                    
+                </div>
+                
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--------------------------------------------------------------------------- Coding for Contact Page ------------------------------------------------------------>
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>copyright © All rights reversed || Designed by <span>Ankush Sharma</span></p>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <Script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+            
+        }
+    </Script>
+
+    <script>
+
+
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+        document.addEventListener('click', function(event) {
+    // Check if the click is outside the sidebar and the button to open it
+    if (!sidemenu.contains(event.target) && event.target.tagName !== 'BUTTON' && event.target.tagName !== 'I') {
+        closemenu();
+    }
+});
+
+    </script>
+
+
+</body>
+
+</html>
